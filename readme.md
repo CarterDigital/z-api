@@ -1,27 +1,39 @@
 ## What is this?
 
-Just you wait folks!
+Node/Express API app for Carter FED Project
 
-## Sample Data
+## Getting started
 
-To load sample data, run the following command in your terminal:
-
-```bash
-npm run sample
-```
-
-If you have previously loaded in this data, you can wipe your database 100% clean with:
+To get started just clone the rep and run:
 
 ```bash
-npm run blowitallaway
+npm i
 ```
 
-That will populate 16 stores with 3 authors and 41 reviews. The logins for the authors are as follows:
+```bash
+npm start
+```
 
-|Name|Email (login)|Password|
-|---|---|---|
-|Wes Bos|wes@example.com|wes|
-|Debbie Downer|debbie@example.com|debbie|
-|Beau|beau@example.com|beau|
+This will install all dependencies and start the development server
 
+## Setting up environment variables
+Just rename variables.sample.env to variables.env and add MongoDB connection string
 
+## API endpoints
+
+```bash
+http://localhost:7777/quotes
+```
+
+GET - Lists all quotes
+
+```bash
+http://localhost:7777/quotes/add
+```
+
+POST - Inserts a new quote
+
+Params:
+
+Name: (string)
+Quote: (string)
