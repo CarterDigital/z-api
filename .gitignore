@@ -1,5 +1,8 @@
 ## OS and Utility Stuff ##
 
+# Enviroment files
+*.env
+
 # XML feed exclude
 public/feed/trybooking_feed.xml
 
