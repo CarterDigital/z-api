@@ -2,13 +2,15 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const routes = require('./routes/index');
 const errorHandlers = require('./handlers/errorHandlers');
+const expressSanitizer = require('express-sanitizer');
 
 // create our Express app
 const app = express();
 
 // Takes the raw requests and turns them into usable properties on req.body
-app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(expressSanitizer());
 
 // Handle our own routes!
 app.use('/', routes);
